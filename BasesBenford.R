@@ -14,38 +14,7 @@ library(sjmisc)
 library(benford.analysis)
 library(scales)
 # 
-# library(tidytext)
-# library(tmaptools)
-# library(viridis)
-# library(tdymodels)
-# library(shiny)
-# library(shinyjs)
-# library(kableExtra)
-# library(DT)
-# library(formattable)
-# library(stringr)
-# library(NLP)
-# library(tm)
-# library(quanteda)
-# library(SnowballC)
-# library(RColorBrewer)
-# library(wordcloud)
-# library(wordcloud2)
-# library(haven)
-# library(sqldf)
-# library(janeaustenr)
-# library(googleLanguageR)
-# library(readxl)
-# library(ggplot2)
-# library(stringr)
-# library(igraph)
-# library(treemapify)
-# library(lubridate)
-# library(plotly)
-# library(gdata)
-# library(sentimentr)
-# library(SentimentAnalysis)
-# library(rtweet)
+
 
 #======Conectando a Base de Datos
 
@@ -154,14 +123,6 @@ dfdomi<-dfdomi %>%
 write_excel_csv(dfdomi,"Bases/dfDOM_Inver.csv")
 write_excel_csv(dfdomi,"Bases/dfDOM_Inver_Raw.csv")
 #---Importando
-
-library(readr)
-dfdomi<- read_csv("Bases/dfDOM_Inver.csv")
-View(dfDOM_Inver)
-
-# Aplicar el análisis de la Ley de Benford
-bfd <- benford(dfdomi$ValorEjecutado, number.of.digits = 1)
-plot(bfd)
 
 
 #====================================================================================================================
