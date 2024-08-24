@@ -6,30 +6,17 @@
 #library(haven)
 library(tidyverse)
 library(shinyjs)
-#library(rsconnect)
+
 
 #------Kibreria de mapas
 library(leaflet)
-#library(sp)
-#library(sf)
-#library(rgdal)
-#library(RColorBrewer)
-#library(tmap)
 library(shiny)
 library(shinydashboard)
-#library(sjmisc)
 library(rpivotTable)
-#library(lubridate)
-#library(anytime)
-#library(RPostgreSQL)
-#library(DBI)
 library(stringr)
-#library(htmlwidgets)
-#library(hash)
-#library(pool)
 
 
-#-----------Base   
+
 #-----------Base  
 
 
@@ -91,49 +78,7 @@ ui <- dashboardPage( skin = "red",
 
 server <- function(input, output) {
   
-  # 
-  # #----------------------------------Lanzamiento de mapa
-  # 
-  # #---
-  # output$myMap <- renderLeaflet({
-  #   # Define los iconos personalizados
-  #   icons <- awesomeIcons(
-  #     icon = 'ios-close',
-  #     iconColor = 'black',
-  #     library = 'ion',
-  #     markerColor = 'blue'
-  #   )
-  # 
-  #   # Define las capas de mapa, incluyendo satélite
-  #   leaflet(base) %>%
-  #     addTiles(group ="OpenStreetMap") %>%  # OpenStreetMap por defecto
-  #     addProviderTiles('OpenStreetMap.France', group = "OpenStreetMap.France") %>%
-  #     addProviderTiles('OpenStreetMap.HOT', group = "OpenStreetMap.HOT") %>%
-  #     addProviderTiles('Esri.WorldImagery', group = "Satélite") %>%  # Capa de satélite de Esri
-  #     setView(lat = 13.7941847, lng = -88.8965302, zoom = 10) %>%
-  #     addAwesomeMarkers(lat = base$`_UBICACION_DENUNCIA_latitude`,
-  #                       lng = base$`_UBICACION_DENUNCIA_longitude`,
-  #                       popup = ~paste(sep = "<br/>",
-  #                                     "<b> Ir al link para observar la Fotografía del Problema:</a></b>",
-  #                                     img(src = ~base$FotoReferencia_1_URL,
-  #                                         class = "custom-logo",
-  #                                         style = "margin-top: 0px; padding-left:36px;padding-bottom:5px",
-  #                                         height = 320 ),
-  #                                     "<b> Fecha del Problema:</a></b>",
-  #                                     base$FECHA_DENUNCIA,
-  #                                     "<b> Duración Denuncia:</a></b>",
-  #                                     data$PeriodoDias
-  #                                     ),
-  #                       label = ~paste(base$PROBLEMA_01, base$PROBLEMA_02,base$PROBLEMA_03,base$PROBLEMA_04,base$PROBLEMA_05,base$PROBLEMA_06),
-  # 
-  #                       icon = icons )%>%
-  #     # Añadir control de capas para seleccionar entre OpenStreetMap y Satélite
-  #     addLayersControl(
-  #       baseGroups = c("OpenStreetMap", "OpenStreetMap.France","OpenStreetMap.HOT",  "Satélite"),
-  #       options = layersControlOptions(collapsed = TRUE)
-  #     )
-  # })
-  # 
+  
 
   # Renderizar el mapa
   output$myMap <- renderLeaflet({
