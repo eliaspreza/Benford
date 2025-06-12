@@ -18,6 +18,10 @@ library(knitr)
 library(kableExtra)
 library(rmarkdown )
 library(bslib)
+install.packages("rsconnect")
+# install.packages("devtools")
+devtools::install_github("rstudio/rsconnect")
+rsconnect::writeManifest()
 
 # install.packages("devtools") # run this to install the devtools package
 #devtools::install_github("carloscinelli/benford.analysis", build_vignettes = TRUE)
